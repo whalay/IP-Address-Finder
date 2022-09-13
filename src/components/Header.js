@@ -2,6 +2,7 @@
 import React from 'react'
 
 import background from "../assets/images/pattern-bg.png"
+import arrow from '../assets/images/icon-arrow.svg'
 
 
 const Header = ({ipData, fetchMoviesHandler, inputText, InputHandler, SubmitHandler, enteredNameIsInValid, nameInputBlurHandler, error}) => {
@@ -25,7 +26,7 @@ const Header = ({ipData, fetchMoviesHandler, inputText, InputHandler, SubmitHand
                 <form action="" onClick={SubmitHandler} >
                     <input type="text" size="50" placeholder='search for any IP or domain' onBlur={nameInputBlurHandler} onChange={InputHandler} value={inputText} className='p-3 outline-none border rounded-l-2xl ' />
                     {enteredNameIsInValid && <p>IP cannot be empty</p>}
-                    <button className='bg-black p-3 rounded-r-2xl text-white'>search</button>
+                    <button className='bg-black p-5 rounded-r-2xl text-white'><img src={arrow} alt="" /></button>
                     {error && <p>Put correct address</p>}
                 </form>
              {/* <IpDetails ipData={ipData}/> */}
